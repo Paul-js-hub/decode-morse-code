@@ -15,10 +15,10 @@ end
 
 def decode_word(word)
   str = ''
-  word.split.each do | n |
+  word.split.each do |n|
     str += decode_char(n)
   end
-  return str
+  str
 end
 
 def decode(msg)
