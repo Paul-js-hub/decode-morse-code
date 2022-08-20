@@ -6,19 +6,21 @@ module MyEnumerable
   def all?
     @list.each do |element|
       return true unless block_given?
-      true_false = yield(element) 
+
+      true_false = yield(element)
       return false unless true_false
     end
-    return true
+    true
   end
 
   def any?
     @list.each do |element|
       return false unless block_given?
-      true_false = yield(element) 
+
+      true_false = yield(element)
       return true if true_false
     end
-    return false
+    false
   end
 
   def filter
